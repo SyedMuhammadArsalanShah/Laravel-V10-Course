@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\khuzaimaController;
+use App\Http\Controllers\smas;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -133,3 +135,27 @@ Route::get("/post/{id?}/{number?}/{res?}", function ($id = "no value here", $num
 
     return view("info", compact("id", "res"));
 });
+
+
+
+
+
+
+
+
+
+
+
+
+Route::view("/prepration", "prep");
+Route::view("/contact", "contact");
+Route::view("/information", "welcome");
+Route::view("/post", "mypost");
+
+
+Route::get("user/{id?}", [smas::class, "show"]);
+
+
+
+
+Route::get("ahmed/{id?}",[khuzaimaController::class,"show"]);
