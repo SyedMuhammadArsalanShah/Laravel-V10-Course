@@ -1,3 +1,5 @@
+<x-header   componentName="Yar Tum to welcome Page ho "  />
+
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>

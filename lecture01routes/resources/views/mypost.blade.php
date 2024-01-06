@@ -1,3 +1,4 @@
+<x-header   componentName="My Post Page Hai "  />
 <!DOCTYPE html>
 <html lang="en">
 <head>

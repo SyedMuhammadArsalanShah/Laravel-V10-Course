@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\khuzaimaController;
 use App\Http\Controllers\smas;
+use App\Http\Controllers\yousufa;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -150,12 +151,11 @@ Route::get("/post/{id?}/{number?}/{res?}", function ($id = "no value here", $num
 Route::view("/prepration", "prep");
 Route::view("/contact", "contact");
 Route::view("/information", "welcome");
-Route::view("/post", "mypost");
+Route::view("/posts", "mypost");
+// Route::view("/bladeengine", "ibe");
 
 
 Route::get("user/{id?}", [smas::class, "show"]);
 
-
-
-
-Route::get("ahmed/{id?}",[khuzaimaController::class,"show"]);
+Route::get("ahmed/{id?}", [khuzaimaController::class, "show"]);
+Route::get("bladeengine/{num?}", [yousufa::class, "checknum"]);
